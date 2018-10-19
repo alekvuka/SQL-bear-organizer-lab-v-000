@@ -30,7 +30,7 @@ def selects_most_prominent_color_and_returns_with_count
   #{}"SELECT MAX(color), COUNT('DISTINCT MAX(color)') FROM bears;"
   #{}"SELECT color, COUNT(bears.color) FROM bears WHERE color LIKE MAX(color);"
   #{}"SELECT color, COUNT(color) FROM bears WHERE color LIKE 'MAX(color)';"
-  "SELECT color, COUNT(color) FROM bears GROUP BY color;"
+  "SELECT color, COUNT(color) FROM bears GROUP BY color LIMIT 1;"
 
 
 end
